@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Emerald Envelope</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The River template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
+    <link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css? family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <style>
+        /***********
+1. Fonts
+***********/
+        
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
+        /***********
+1. Fonts
+***********/
+        
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
+        /*********************************
+2. Body and some general stuff
+*********************************/
+        
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #a5a5a5;
+            background-color: #D7BDE2;
+            border-style: dotted;
+        }
+        
+        div {
+            display: block;
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        ul {
+            list-style: none;
+            margin-bottom: 0px;
+        }
+        
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            line-height: 2;
+            font-weight: 500;
+            color: #6d6d6d;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+        }
+        
+        p a {
+            display: inline;
+            position: relative;
+            color: inherit;
+            border-bottom: solid 1px #ffa07f;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        a {
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        a,
+        a:hover,
+        a:visited,
+        a:active,
+        a:link {
+            text-decoration: none;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+        }
+        
+        p a:active {
+            position: relative;
+            color: #FF6347;
+        }
+        
+        p a:hover {
+            color: #FFFFFF;
+            background: #ffa07f;
+        }
+        
+        p a:hover::after {
+            opacity: 0.2;
+        }
+        
+         ::selection {
+            background: rgba(255, 163, 123, 1);
+            color: #ffffff;
+        }
+        
+        h1 {
+            font-size: 48px;
+        }
+        
+        h2 {
+            font-size: 36px;
+        }
+        
+        h3 {
+            font-size: 24px;
+        }
+        
+        h4 {
+            font-size: 18px;
+        }
+        
+        h5 {
+            font-size: 14px;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            line-height: 1.2;
+            color: #393939;
+            font-weight: 600;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        button:active {
+            outline: none;
+        }
+        
+        .form-control {
+            color: #db5246;
+        }
+        
+        section {
+            display: block;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix::after {
+            clear: both;
+        }
+        
+        .clearfix {
+            zoom: 1;
+        }
+        
+        .float_left {
+            float: left;
+        }
+        
+        .float_right {
+            float: right;
+        }
+        
+        .trans_200 {
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .trans_300 {
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+        }
+        
+        .trans_400 {
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            -ms-transition: all 400ms ease;
+            -o-transition: all 400ms ease;
+            transition: all 400ms ease;
+        }
+        
+        .trans_500 {
+            -webkit-transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+        }
+        
+        .fill_height {
+            height: 100%;
+        }
+        
+        .super_container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .prlx_parent {
+            overflow: hidden;
+        }
+        
+        .prlx {
+            height: 130% !important;
+        }
+        
+        .parallax-window {
+            min-height: 400px;
+            background: transparent;
+        }
+        
+        .parallax_background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .background_image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .nopadding {
+            padding: 0px !important;
+        }
+        
+        .owl-carousel,
+        .owl-carousel .owl-stage-outer,
+        .owl-carousel .owl-stage,
+        .owl-carousel .owl-item {
+            height: 100%;
+        }
+        
+        .slide {
+            height: 100%;
+        }
+        /*---------------Header----------------------------*/
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            z-index: 100;
+        }
+        
+        .header::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: rgba(0, 0, 0, 0.7);
+            content: '';
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            -ms-transition: all 400ms ease;
+            -o-transition: all 400ms ease;
+            transition: all 400ms ease;
+        }
+        
+        .header.scrolled::before {
+            height: 100%;
+        }
+        
+        .header_content {
+            width: 100%;
+            height: 100px;
+            padding-left: 62px;
+            padding-right: 62px;
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            -ms-transition: all 400ms ease;
+            -o-transition: all 400ms ease;
+            transition: all 400ms ease;
+        }
+        
+        .header.scrolled .header_content {
+            height: 90px;
+        }
+        
+        .logo {
+            width: 300px;
+            height: 41px;
+            border: solid 2px #ffffff;
+            text-align: center;
+        }
+        
+        .logo a {
+            display: block;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            color: palegreen;
+            line-height: 37px;
+        }
+        
+        .main_nav ul li:not(:last-of-type) {
+            margin-right: 49px;
+        }
+        
+        .main_nav ul li a {
+            font-size: 17px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            font-weight: 600;
+            color: burlywood;
+        }
+        
+        .main_nav ul li a:hover,
+        .main_nav ul li.active a {
+            color: aqua;
+        }
+        
+        .book_button {
+            width: 170px;
+            height: 54px;
+            background: linear-gradient(to right top, #86e7b9, #69e8a0, #51e880, #41e759, #3ce517);
+            margin-left: 45px;
+            border-radius: 10px;
+            text-align: center;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .book_button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .book_button:hover a {
+            color: #ffa37b;
+        }
+        
+        .book_button a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 54px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+        
+        .hamburger {
+            display: none;
+            margin-left: 25px;
+            cursor: pointer;
+            float: right;
+        }
+        
+        .hamburger i {
+            font-size: 24px;
+            color: palegreen;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .hamburger:hover i {
+            color: #ffa37b;
+        }
+        /*********************************
+4. Menu
+*********************************/
+        
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 101;
+            background: rgba(255, 255, 255, 0.93);
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .menu.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .menu_content {
+            padding-right: 30px;
+            padding-top: 170px;
+        }
+        
+        .menu_close {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .menu_close i {
+            font-size: 24px;
+            color: #121212;
+        }
+        
+        .menu_close:hover i {
+            color: #ffa37b;
+        }
+        
+        .menu_nav ul li:not(:last-of-type) {
+            margin-bottom: 5px;
+        }
+        
+        .menu_nav ul li a {
+            font-weight: 700;
+            font-size: 36px;
+            color: #121212;
+            line-height: 1.2;
+        }
+        
+        .menu_nav ul li a:hover {
+            color: #ffa37b;
+        }
+        
+        .menu_nav ul li a span {
+            color: #690772;
+        }
+        
+        .menu_extra {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+        
+        .menu_book {
+            display: none;
+            margin-top: 50px;
+        }
+        
+        .menu_book a {
+            display: inline-block;
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .menu_book a::after {
+            display: block;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.62);
+            content: '';
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .menu_book a:hover {
+            color: #ffa37b;
+        }
+        
+        .menu_book a:hover::after {
+            background: #ffa37b;
+        }
+        
+        #corners {
+            background: #D98880;
+            top: 80px;
+            margin-left: 100px;
+        }
+        
+        h4 {
+            color: black;
+            background-color: #E6B0AA;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .nav {
+            background-color: #333;
+            overflow: hidden;
+            margin-top: 90px;
+        }
+        
+        .nav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 11px 12px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .nav a:hover {
+            color: grey;
+            background: white;
+        }
+        
+        .copyright {
+            width: 100%;
+            height: 60px;
+            background: #ffffff;
+            text-align: center;
+            line-height: 33px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #6d6d6d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                <div class="logo"><a href="#">EMERALD ENVELOPE</a></div>
+                <div class="ml-auto d-flex flex-row align-items-center justify-content-start">
+                    <nav class="main_nav">
+                        <ul class="d-flex flex-row align-items-start justify-content-start">
+                            <li class="active"><a href="ProjectCNK/index.html">Home</a></li>
+                            <li><a href="ProjectCNK/Slider/Project Slide.html">About us</a></li>
+                            <li><a href="https://www.wcs.org/">Blog</a></li>
+                        </ul>
+                    </nav>
+                    <div class="book_button"><a href="http://forms.gle/6Qn9u6C9hBtyNtuL6.html">Register Now!</a></div>
+
+                    <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Menu -->
+
+        <div class="menu trans_400 d-flex flex-column align-items-end justify-content-start">
+            <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+            <div class="menu_content">
+                <nav class="menu_nav text-right">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu_extra">
+                <div class="menu_book text-right"><a href="#">EMERALD ENVELOPE</a></div>
+                <div class="menu_phone d-flex flex-row align-items-center justify-content-center">
+                    <span>For our beloved country, <br>Sent with care and affection </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+
+
+
+            <div id="corners" class="column">
+                <img src="IMG_20190714_111709.jpg" height=100% width=100%>
+                <h1>Your Role as a citizen</h1>
+                <h4>The smoke emitted from vehicles, industries and factories are carried to miles and ultimately generate dirty and unhealthy pollution. As a citizen, you can play the right role to control maximum pollution by following a few of easy steps
+                    that starts from your home. You can discover different ways to keep the environment clean, green and healthy. Read on to find out what you can do from your end to reduce pollution. </h4>
+            </div>
+            <p> </p><br>
+
+            <div id="corners" class="column">
+                <h1>1...REDUCE THE USAGE OF YOUR ELECTRICAL APPLIANCES</h1>
+                <h4>This serves as the best means to conserve the energy. You can buy appliances that are not only environment friendly but energy efficient too. One of the best ways to electricity is by switching off all the lights and appliances when not
+                    in use. You can wash your clothes in a washing machine using both warm and cold water instead of using hot water. This can cover some of the electric lose.</h4>
+            </div>
+            <p> </p><br>
+
+
+
+            <div id="corners" class="column">
+                <h1>2... DRIVE YOUR CAR LESS TO REDUCE THE PROBLEMS OF PARKING SPACES</h1>
+                <img src="file-20171024-13357-apmifu.jpg" height=100% width=100%>
+                <h4>You can drive your car less and acquire other means of transportation instead. Many countries recommend repairing of leaking air condition of your car, which adversely destroys the upper layer of ozone atmosphere. You must also be careful
+                    while filling your car with gas and see that it doesn�t spills off the tank. You can also use motor oil that is energy-efficient. Over the years, the number of vehicles on the roads have increased. Due to this, it has also become difficult
+                    to find parking spaces. Foldable bicycles and scooters are supposed to be popular due to that fact.</h4>
+            </div>
+            <p> </p><br>
+
+
+            <div id="corners" class="column">
+                <h1>3...REDUCE THE USAGE OF YUR WOODEN STOVE</h1>
+                <h4>Wood stove tend to generate excess smile into the air which is harmful for the health of your entire family. Instead you can cook food on energy efficient appliances that promises low cost and quick cooking too.</h4>
+            </div>
+            <p> </p><br>
+
+            <div id="corners" class="column">
+                <h1>4... MAINTAIN AHEALTHY ECOSYSTEM</h1>
+                <img src="new.png" height=100% width=50%>
+                <h4>It is the need of an ecosystem to have good interaction with green plants, organisms and animals in a healthy environment. These three helps to keep the entire ecosystem healthy and alive for many years together. It is due to excessive
+                    air pollution and global warming that the entire ecosystem is negatively affected today. With a little change in your daily lifestyle, you can definitely help to protect the entire planet with its ecosystem is a healthier way.</h4>
+            </div>
+            <p> </p><br>
+
+
+            <div id="corners" class="column">
+                <h1>5... REDUCE USAGE OF CHEMICALS AND PESTICIDES</h1>
+                <img src="Pesticide.jpg" height=100% width=100%>
+                <h4>It is always advisable to eliminate maximum household chemicals and pesticides that directly pollute the green environment. Instead you can make your own solutions for cleaning purpose using distilled vinegar, lemon and baking soda. There
+                    are many �green� cleaning products available in the market which is environmentally friendly and conventional cleaners too. You can find out practical ways to help clean the environment by choosing better alternates than using chemicals
+                    and pesticides.</h4>
+            </div>
+            <p> </p><br>
+
+
+            <div id="corners" class="column">
+                <h1>6... RECYCLE THE WASTE PRODUCTS</h1>
+                <img src="The-Ecofriendly-goodie-bag.jpg" height=100% width=100%>
+                <h4>Many waste products like glass, plastics, aluminum and paper can be recycled instead of been disposed off in the dustbin. This will prevent any air pollution accumulated on burning those products. You can also use reusable towels and reusable
+                    bags rather than using disposable plastics or bags. There are many practical ways to help clean the environment on how you can recycle different materials.</h4>
+            </div>
+            <p> </p><br>
+
+
+            <div id="corners" class="column">
+                <h1>7... REDUCE CARBON FOOTPRINTS AND CUT DOWN AIR POLLUTION</h1>
+                <h4>There are many ways to cut back carbon footprints causing excess air pollution. You can lower the temperature of your water heater, wash dishes manually instead of using a dishwasher, reduce the use of air conditioner or heater and buy
+                    energy efficient lights to lower the energy consumption and heat generation level. You can also utilize solar lights around your home.</h4>
+            </div>
+            <p> </p><br>
+
+            <div id="corners" class="column">
+                <h1>8... GROW YOUR FOOD LOCALLY</h1>
+                <img src="ED-AS209_edp051_GR_20140515094705.jpg" height=100% width=100%>
+                <h4>Planting of the food locally helps in reducing the overall commercial transportation of food items. This is because it reduces the requirement of pesticides and preservatives to preserve them. These preservatives directly pollute the air.
+                    It is also a proven fact that organic food is more sustainable, unlike the food items that are preserved. This is because it reduces the need of using harmful pesticides and chemicals. It helps to reduce the harm caused to the entire
+                    global ecosystem.</h4>
+            </div>
+            <p> </p><br>
+
+
+            <div id="corners" class="column">
+                <h1>9...PRACTICAL WAYS TO HELP CLEAN THE ENVIRONMENT BY REDUCIN CONTAMMINANTS</h1>
+                <h4>It is always a better option to reduce the usage of contaminants and toxic materials at home. A healthy environment begins from your home. You must also take care to dispose off all the waste material in a proper way rather can simply
+                    disposing them off in the bins. This will also help to prevent water contamination.</h4>
+            </div>
+            <p> </p><br>
+
+            <div id="corners" class="column">
+                <h1>10... AVOID THE POLLUTION</h1>
+                <img src="177523778.jpg" height=100% width=100%>
+                <h4>Try not to throw away trash or waste materials almost anywhere in and around your house. You must try to dispose off biodegradable as well as non-biodegradable wastes in a proper way and avoid littering it all over your home environment.
+                    Any excess air or water pollution can negatively affect you and your family�s health while destroying the entire environment globally. By following these practical ways to help clean the environment, you will make a big difference
+                    to the environment. These tips will also radically change your entire family lifestyle.</h4>
+            </div>
+            <p> </p>
+            <p> </p>
+
+            <div class="nav">
+                <a class="active" href="moralityofacitizen2.html">Read More about Stray Dogs in Yangon</a>
+                <a href="moralityofacitizen3.html">Read More about Smart Garbage Monitoring System</a>
+                <a href="moralityofacitizen4.html">Read More about Recycling</a>
+                <a href="moralityofacitizen5.html">Read More about Trash Disposal</a>
+            </div>
+            <p><small>crd;</small></footer/p>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off " style="margin-top:40px;">
+
+            <div class="w3-xlarge w3-section">
+                <i class="fa fa-facebook-official w3-hover-opacity" style="padding:10px;"></i>
+                <i class="fa fa-instagram w3-hover-opacity " style="padding:10px;"></i>
+                <i class="fa fa-snapchat w3-hover-opacity " style="padding:10px;"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity " style="padding:10px;"></i>
+                <i class="fa fa-twitter w3-hover-opacity " style="padding:10px;"></i>
+                <i class="fa fa-linkedin w3-hover-opacity " style="padding:10px;"></i>
+            </div>
+        </footer>
+        <div class="copyright">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="styles/bootstrap-4.1.2/popper.js"></script>
+    <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+    <script src="plugins/greensock/TweenMax.min.js"></script>
+    <script src="plugins/greensock/TimelineMax.min.js"></script>
+    <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="plugins/greensock/animation.gsap.min.js"></script>
+    <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+    <script src="plugins/easing/easing.js"></script>
+    <script src="plugins/progressbar/progressbar.min.js"></script>
+    <script src="plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="plugins/jquery-datepicker/jquery-ui.js"></script>
+    <script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

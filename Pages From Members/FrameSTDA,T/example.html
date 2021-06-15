@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        .heading {
+            position: relative;
+        }
+        
+        .heading .title {
+            font-family: 'Anton', sans-serif;
+            font-size: 50px;
+            float: left;
+            margin: -10px 30px -10px 160px;
+            color: #99b19c;
+        }
+        
+        .nav-link ul {
+            list-style-type: none;
+            overflow: hidden;
+        }
+        
+        .nav-link li a {
+            float: left;
+            text-decoration: none;
+            display: inline;
+            padding: 25px 25px;
+            margin: -25px 20px 0 30px;
+            text-align: center;
+            color: #696464;
+            font-size: 25px;
+        }
+        
+        .nav-link li a:hover {
+            color: #99b19c;
+            transition: transform 1s;
+            transform: scale(1.5);
+        }
+        
+        .container {
+            width: 1280px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 10px 10px 10px 10px;
+            margin: 40px;
+        }
+        
+        .container .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: #96f7d2;
+            margin: 10px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        
+        .container .box .imgBox {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container .box .imgBox img {
+            max-width: 100%;
+            height: 300px;
+            transition: transform 2s;
+        }
+        
+        .container .box:hover .imgBox img {
+            transform: scale(1.2);
+        }
+        
+        .container .box .details {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, .5);
+            transform: scaleY(0);
+            transition: transform .5s;
+        }
+        
+        .container .box:hover .details {
+            transform: scaleY(1);
+        }
+        
+        .container .box .details .content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            padding: 15px;
+            color: #ffff;
+        }
+        
+        .container .box .details .content h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            color: #96f7d2;
+        }
+        
+        .container .box .details .content p {
+            margin: 10px 0 0;
+            padding: 0;
+        }
+        
+        .container .box .details .content a {
+            margin: 15px 0 0;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 900;
+            color: white;
+            padding: 10px;
+            border: 1px solid #333;
+        }
+        
+        .container .box .details .content a:hover {
+            background: #4be3ac;
+            color: white;
+        }
+        
+        .heading {
+            font-family: 'Londrina Shadow', cursive;
+            text-align: center;
+            font-size: 90px;
+            color: white;
+            padding-top: 10px;
+        }
+        
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #f0e3c4;
+            opacity: 0.8;
+            color: white;
+        }
+        
+        .footer img {
+            float: left;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            padding: 40px 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="heading">
+        <div class="title">
+            <p>Wild Life<br>In Myanmar</p>
+        </div>
+        <div class="nav-link">
+            <ul>
+                <li><a href="ProjectCNK/index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.wcs.org/">Blog</a></li>
+                <li><a href="booking.html">Register Now!</a></li>
+                <li><a href="ProjectCNK/Slider/Project Slide.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="imgBox">
+                <img src="birds.jpg" alt="bird">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Birds</h2>
+                    <p>The avifauna of Myanmar include a total of 1062 species, of which six are endemic, two have been introduced by humans and ten are rare or accidental. One species listed is extirpated in Myanmar and is not included in the species count.
+                        Of these, 51 species are globally threatened.
+                    </p>
+                    <a href="https://myanmar.wcs.org/Wildlife/Birds.aspx">Read More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="dolphin.jpg" alt="dolphin">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Dolphin</h2>
+                    <p> Irrawaddy dolphins are found in the Mekong River in Laos and Cambodia, the Mahakam River in Kalimantan in Indonesia, the Padma River in Bangladesh, the Irrawaddy River in Myanmar, and the Yangtze in China. River dolphins are found
+                        in several rivers in Asia as well as the Amazon basin in South America. </p>
+
+                    <a href="https://myanmar.wcs.org/Wildlife/Dolphin.aspx">Read More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="tiger.jpg" alt="tiger">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Tigers</h2>
+                    <p>Myanmar is thought to possess the largest number of wild tigers after India. In 2004, Myanmar set aside a stretch of jungle the size of Vermont in the isolated Hukawng Valley to become the world's largest tiger reserve. </p>
+                    <a href="https://myanmar.wcs.org/Wildlife/Tiger.aspx">Read More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="primate1.jpg" alt="primate">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Primate</h2>
+                    <p>The Myanmar snub-nosed monkey (Rhinopithecus strykeri) is a critically threatened species of colobine monkey discovered in 2010 in northern Burma (Myanmar). </p>
+                    <a href="http://factsanddetails.com/southeast-asia/Myanmar/sub5_5h/entry-3146.html#chapter-7">Read More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="ayeyyawaddy.jpg" alt=Irrawady>
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Ayeyarwady River</h2>
+                    <p>The Irrawaddy or, officially, Ayeyarwady River is a river that flows from north to south through Myanmar. It is the country's largest river and most important commercial waterway. </p>
+                    <a href="#">Read More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="biodiversity.jpg" alt="biodiversity">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Biodiversity</h2>
+                    <p>Biodiversity refers to the variety of life. It is seen in the number of species in an ecosystem, and is used as a measure of the health of biological systems.. </p>
+                    <a href="https://myanmar.wcs.org/Wildlife/Biodiversity.aspx">Read More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="northern_forest.jpg" alt="northern forest">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Northern-Forest</h2>
+                    <p>The Northern Forests Complex is one of the largest remaining contiguous forests in Southeast Asia and stretches across lowland forests and wetlands, coniferous forests, and snow-covered mountains above the tree line in Northern Myanmar.</p>
+                    <a href="https://myanmar.wcs.org/Wild-Places/Northern-Forests.aspx">Read More</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="southern_forest.jpg" alt="southern forest">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2>Southern-Forest</h2>
+                    <p>The Southern Forest Complex is located in the southern part of Myanmar, and features a long coast facing the Andaman sea on the west, and the Taninthayi range on the east. </p>
+                    <a href="">Read More</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="contact">
+            <a href="https://www.facebook.com/shwethawdar.aung"><img src="facebook.png" alt="facebook"></a>
+            <a href="https://twitter.com/ShweThawdar"><img src="twitter.png" alt="twitter"></a>
+            <a href="https://apc.delve.office.com/?u=5525455f-3b6a-4363-b23c-478d2944b8c6&v=work"><img src="gmail.png" alt="gmail"></a>
+            <a href="https://www.instagram.com/shwethawdaraung/?hl=en"><img src="instagram.png" alt="instagram"></a>
+
+        </div>
+    </div>
+</body>
+
+</html>

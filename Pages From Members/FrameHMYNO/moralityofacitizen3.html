@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Emerald Envelope</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The River template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
+    <link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css? family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <style>
+        /***********
+1. Fonts
+***********/
+        
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
+        /***********
+1. Fonts
+***********/
+        
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
+        /*********************************
+2. Body and some general stuff
+*********************************/
+        
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #a5a5a5;
+            background-color: #D7BDE2;
+            border-style: dotted;
+        }
+        
+        div {
+            display: block;
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        ul {
+            list-style: none;
+            margin-bottom: 0px;
+        }
+        
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            line-height: 2;
+            font-weight: 500;
+            color: #6d6d6d;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+        }
+        
+        p a {
+            display: inline;
+            position: relative;
+            color: inherit;
+            border-bottom: solid 1px #ffa07f;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        a {
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        a,
+        a:hover,
+        a:visited,
+        a:active,
+        a:link {
+            text-decoration: none;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+        }
+        
+        p a:active {
+            position: relative;
+            color: #FF6347;
+        }
+        
+        p a:hover {
+            color: #FFFFFF;
+            background: #ffa07f;
+        }
+        
+        p a:hover::after {
+            opacity: 0.2;
+        }
+        
+         ::selection {
+            background: rgba(255, 163, 123, 1);
+            color: #ffffff;
+        }
+        
+        p::selection {}
+        
+        h1 {
+            font-size: 48px;
+        }
+        
+        h2 {
+            font-size: 36px;
+        }
+        
+        h3 {
+            font-size: 24px;
+        }
+        
+        h4 {
+            font-size: 18px;
+        }
+        
+        h5 {
+            font-size: 14px;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+            line-height: 1.2;
+            color: #393939;
+            font-weight: 600;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        button:active {
+            outline: none;
+        }
+        
+        .form-control {
+            color: #db5246;
+        }
+        
+        section {
+            display: block;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix::after {
+            clear: both;
+        }
+        
+        .clearfix {
+            zoom: 1;
+        }
+        
+        .float_left {
+            float: left;
+        }
+        
+        .float_right {
+            float: right;
+        }
+        
+        .trans_200 {
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .trans_300 {
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+        }
+        
+        .trans_400 {
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            -ms-transition: all 400ms ease;
+            -o-transition: all 400ms ease;
+            transition: all 400ms ease;
+        }
+        
+        .trans_500 {
+            -webkit-transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+        }
+        
+        .fill_height {
+            height: 100%;
+        }
+        
+        .super_container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .prlx_parent {
+            overflow: hidden;
+        }
+        
+        .prlx {
+            height: 130% !important;
+        }
+        
+        .parallax-window {
+            min-height: 400px;
+            background: transparent;
+        }
+        
+        .parallax_background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .background_image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .nopadding {
+            padding: 0px !important;
+        }
+        
+        .owl-carousel,
+        .owl-carousel .owl-stage-outer,
+        .owl-carousel .owl-stage,
+        .owl-carousel .owl-item {
+            height: 100%;
+        }
+        
+        .slide {
+            height: 100%;
+        }
+        /*---------------Header----------------------------*/
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            z-index: 100;
+        }
+        
+        .header::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: rgba(0, 0, 0, 0.7);
+            content: '';
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            -ms-transition: all 400ms ease;
+            -o-transition: all 400ms ease;
+            transition: all 400ms ease;
+        }
+        
+        .header.scrolled::before {
+            height: 100%;
+        }
+        
+        .header_content {
+            width: 100%;
+            height: 100px;
+            padding-left: 62px;
+            padding-right: 62px;
+            -webkit-transition: all 400ms ease;
+            -moz-transition: all 400ms ease;
+            -ms-transition: all 400ms ease;
+            -o-transition: all 400ms ease;
+            transition: all 400ms ease;
+        }
+        
+        .header.scrolled .header_content {
+            height: 90px;
+        }
+        
+        .logo {
+            width: 300px;
+            height: 41px;
+            border: solid 2px #ffffff;
+            text-align: center;
+        }
+        
+        .logo a {
+            display: block;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            color: palegreen;
+            line-height: 37px;
+        }
+        
+        .main_nav ul li:not(:last-of-type) {
+            margin-right: 49px;
+        }
+        
+        .main_nav ul li a {
+            font-size: 17px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            font-weight: 600;
+            color: burlywood;
+        }
+        
+        .main_nav ul li a:hover,
+        .main_nav ul li.active a {
+            color: aqua;
+        }
+        
+        .book_button {
+            width: 170px;
+            height: 54px;
+            background: linear-gradient(to right top, #86e7b9, #69e8a0, #51e880, #41e759, #3ce517);
+            margin-left: 45px;
+            border-radius: 10px;
+            text-align: center;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .book_button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .book_button:hover a {
+            color: #ffa37b;
+        }
+        
+        .book_button a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 54px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+        
+        .hamburger {
+            display: none;
+            margin-left: 25px;
+            cursor: pointer;
+            float: right;
+        }
+        
+        .hamburger i {
+            font-size: 24px;
+            color: palegreen;
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .hamburger:hover i {
+            color: #ffa37b;
+        }
+        /*********************************
+4. Menu
+*********************************/
+        
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 101;
+            background: rgba(255, 255, 255, 0.93);
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .menu.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .menu_content {
+            padding-right: 30px;
+            padding-top: 170px;
+        }
+        
+        .menu_close {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .menu_close i {
+            font-size: 24px;
+            color: #121212;
+        }
+        
+        .menu_close:hover i {
+            color: #ffa37b;
+        }
+        
+        .menu_nav ul li:not(:last-of-type) {
+            margin-bottom: 5px;
+        }
+        
+        .menu_nav ul li a {
+            font-weight: 700;
+            font-size: 36px;
+            color: #121212;
+            line-height: 1.2;
+        }
+        
+        .menu_nav ul li a:hover {
+            color: #ffa37b;
+        }
+        
+        .menu_nav ul li a span {
+            color: #690772;
+        }
+        
+        .menu_extra {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+        
+        .menu_book {
+            display: none;
+            margin-top: 50px;
+        }
+        
+        .menu_book a {
+            display: inline-block;
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .menu_book a::after {
+            display: block;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.62);
+            content: '';
+            -webkit-transition: all 200ms ease;
+            -moz-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+        
+        .menu_book a:hover {
+            color: #ffa37b;
+        }
+        
+        .menu_book a:hover::after {
+            background: #ffa37b;
+        }
+        
+        #corners {
+            top: 80px;
+            background: #D98880;
+        }
+        
+        h4 {
+            color: black;
+            background-color: #E6B0AA;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .copyright {
+            width: 100%;
+            height: 33px;
+            background: #ffffff;
+            text-align: center;
+            line-height: 33px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #6d6d6d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                <div class="logo"><a href="#">EMERALD ENVELOPE</a></div>
+                <div class="ml-auto d-flex flex-row align-items-center justify-content-start">
+                    <nav class="main_nav">
+                        <ul class="d-flex flex-row align-items-start justify-content-start">
+                            <li class="active"><a href="ProjectCNK/index.html">Home</a></li>
+                            <li><a href="ProjectCNK/Slider/Project Slide.html">About us</a></li>
+                            <li><a href="https://www.wcs.org/">Blog</a></li>
+                        </ul>
+                    </nav>
+                    <div class="book_button"><a href="http://forms.gle/6Qn9u6C9hBtyNtuL6.html">Register Now!</a></div>
+
+                    <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Menu -->
+
+        <div class="menu trans_400 d-flex flex-column align-items-end justify-content-start">
+            <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+            <div class="menu_content">
+                <nav class="menu_nav text-right">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu_extra">
+                <div class="menu_book text-right"><a href="#">EMERALD ENVELOPE</a></div>
+                <div class="menu_phone d-flex flex-row align-items-center justify-content-center">
+                    <span>For our beloved country, <br>Sent with care and affection </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" style="top:80px;">
+            <h1>Smart garbage monitoring system</h1>
+            <h4>In this section, I would like to introduce a garbage system that is widely used in Japan and is a useful way.</h4>
+
+            <h1>STEP 1: OVERVIEW OF THE MONITORING SYSTEM</h1>
+            <h4>The idea struck us when we observed that the garbage truck use to go around the town to collect solid waste twice a day. Although this system was thorough it was very inefficient. For example let�s say street A is a busy street and we see
+                that the garbage fills up really fast whereas maybe street B even half full. This example is something that actually happens thus it leads us to the �Eureka� moment!</h4>
+            <img src="F8Q6ZQNJ48PZYDG.LARGE.jpg">
+
+            <h4>What our system does is it gives a real time indicator of the garbage level in a trashcan at any given time. Using that data we can then optimize waste collection routes and ultimately reduce fuel consumption. It allows trash collectors to
+                plan their daily/weekly pick up schedule.</h4>
+
+            <h1>STEP 2: COMPONENTS IN OUR SYSTEM</h1>
+            <h4>To start with you will first have to enter the height of the dustbin. This will help us generate the percentage of trash in the trashcan. We then have two criteria which need to be satisfied to show that the particular bin needs to be emptied:
+
+                <br><br>1. The amount of trash, in other words let's say if your bin is half full you don't really need to empty it. Our trash or maximum amount that we permit of trash if 75% of the bin. (You could alter the trash according to your preference.)
+                <br><br>2. If supposing a particular trashcan fills up 20% and then for a week doesn't change, it comes into our second criteria time. With time even the little amount will start rotting leading to a smelly surrounding. To avoid that our
+                tolerance level is 2 days, so if a trashcan is less than 75% but it is two days old it then will also need to be emptied.
+
+            </h4>
+            <img src="FMJIGOKJ48PV9RJ.LARGE.jpg">
+            <h4>With these criteria in mind let's understand the technical part:
+                <br><br>� An ultrasonic sensor (A.K.A a distance sensor) will be placed on the interior side of the lid, the ne facing the solid waste. As trash increases, the distance between the ultrasonic and the trash decreases. This live data will
+                be sent to our micro-controller.
+                <br><br>� Our micro-controller then processes the data and through the help of Wi-Fi sends to it visually represents the amount of trash in the bin with a small animation. This process will indicate all the bins which require attention,
+                leading the user to take the most effective route.
+            </h4>
+            <small>crd;</small>
+
+
+        </div>
+        <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off " style="margin-top:80px;">
+
+            <div class="w3-xlarge w3-section ">
+                <i class="fa fa-facebook-official w3-hover-opacity " style="padding:10px; "></i>
+                <i class="fa fa-instagram w3-hover-opacity " style="padding:10px; "></i>
+                <i class="fa fa-snapchat w3-hover-opacity " style="padding:10px; "></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity " style="padding:10px; "></i>
+                <i class="fa fa-twitter w3-hover-opacity " style="padding:10px; "></i>
+                <i class="fa fa-linkedin w3-hover-opacity " style="padding:10px; "></i>
+            </div>
+        </footer>
+        <div class="copyright ">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> All rights reserved | This template is made with <i class="fa fa-heart-o " aria-hidden="true "></i> by <a href="https://colorlib.com " target="_blank ">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js "></script>
+    <script src="styles/bootstrap-4.1.2/popper.js "></script>
+    <script src="styles/bootstrap-4.1.2/bootstrap.min.js "></script>
+    <script src="plugins/greensock/TweenMax.min.js "></script>
+    <script src="plugins/greensock/TimelineMax.min.js "></script>
+    <script src="plugins/scrollmagic/ScrollMagic.min.js "></script>
+    <script src="plugins/greensock/animation.gsap.min.js "></script>
+    <script src="plugins/greensock/ScrollToPlugin.min.js "></script>
+    <script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js "></script>
+    <script src="plugins/easing/easing.js "></script>
+    <script src="plugins/progressbar/progressbar.min.js "></script>
+    <script src="plugins/parallax-js-master/parallax.min.js "></script>
+    <script src="plugins/jquery-datepicker/jquery-ui.js "></script>
+    <script src="plugins/colorbox/jquery.colorbox-min.js "></script>
+    <script src="js/custom.js "></script>
+</body>
+
+</html>
